@@ -1,0 +1,29 @@
+.span__spacer {
+  flex: 1 1 auto;
+}
+
+.form__container {
+  padding: 0 25px;
+  width: 100%;
+}
+
+.content__fullWidth {
+  width: 100%;
+}
+
+.content__Width-50 {
+  width: 50%;
+}
+
+.sub__bar {
+  padding: 0 25px;
+}
+
+.container {
+  padding: 0 25px;
+  padding-bottom: 20px;
+}
+
+header {
+  margin-top: 1rem;
+}

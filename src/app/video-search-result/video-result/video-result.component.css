@@ -1,0 +1,32 @@
+.custom__expansion-header {
+  height: max-content;
+}
+
+.custom__panel-title {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.custom__image {
+  border-radius: 0.5rem;
+}
+
+.custom__video-title {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.description {
+  padding-left: 130px;
+  margin-top: 10px;
+}
+
+.custom__btn-row {
+  display: flex;
+  justify-content: flex-end;
+}

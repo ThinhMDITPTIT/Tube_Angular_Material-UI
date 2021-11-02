@@ -1,0 +1,22 @@
+<mat-card>
+  <ng-container *ngIf="videoSearchResult">
+    <div *ngFor="let video of videoSearchResult?.items" class="detail__info">
+      <app-video-result [videoDetails]="video"></app-video-result>
+    </div>
+  </ng-container>
+
+  <mat-paginator
+    [pageIndex]="currentPageIndex"
+    [length]="lengthPaginator"
+    [pageSize]="pageSizePaginator"
+    (page)="handlePaginatorChange((pageEvent = $event))"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+  <!-- <div *ngIf="pageEvent">
+  <h5>Page Change Event Properties</h5>
+  <div>List length: {{ pageEvent.length }}</div>
+  <div>Page size: {{ pageEvent.pageSize }}</div>
+  <div>Page index: {{ pageEvent.pageIndex }}</div>
+</div> -->
+</mat-card>

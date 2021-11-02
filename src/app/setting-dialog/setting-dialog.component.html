@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Search Setting</h2>
+<mat-dialog-content class="mat-typography custom__container">
+  <h3>Number per page</h3>
+  <mat-form-field appearance="fill">
+    <mat-label>Select Number</mat-label>
+    <mat-select [(ngModel)]="numberPerPageSelect" name="numberPerPage">
+      <mat-option *ngFor="let item of items" [value]="item">
+        {{ item }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <h3>Search debounce</h3>
+  <mat-form-field class="custom__form-field" appearance="fill">
+    <mat-label>Debounce times</mat-label>
+    <input
+      [(ngModel)]="debounceInput"
+      name="Debounce_Input"
+      matInput
+      type="text"
+    />
+  </mat-form-field>
+
+  <h3>API key</h3>
+  <mat-form-field class="custom__form-field" appearance="fill">
+    <mat-label>API key</mat-label>
+    <input
+      [(ngModel)]="apiKeyInput"
+      name="API-key_Input"
+      matInput
+      type="text"
+    />
+  </mat-form-field>
+  <p>Save these setting to apply multiple options.</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close (click)="onNoClick()">Cancel</button>
+  <button
+    mat-button
+    [mat-dialog-close]="{
+      NumberPerPage: numberPerPageSelect,
+      DebounceTimes: debounceInput,
+      APIkey: apiKeyInput
+    }"
+    cdkFocusInitial
+  >
+    Save
+  </button>
+</mat-dialog-actions>

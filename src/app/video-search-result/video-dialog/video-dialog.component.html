@@ -1,0 +1,17 @@
+<div mat-dialog-actions class="custom__btn-row">
+  <h1 mat-dialog-title>Video Details</h1>
+  <button mat-button mat-dialog-close color="warn" (click)="onVideoNoClick()">
+    Close
+  </button>
+</div>
+<div mat-dialog-content class="custom__dialog-content">
+  <iframe
+    width="560"
+    height="315"
+    [src]="videoUrl | safeUrl"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  >
+  </iframe>
+</div>

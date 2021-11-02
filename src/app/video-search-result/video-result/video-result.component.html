@@ -1,0 +1,34 @@
+<mat-accordion>
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header class="custom__expansion-header">
+      <mat-panel-title class="custom__panel-title">
+        <img
+          class="custom__image"
+          mat-card-md-image
+          [src]="videoDetails?.snippet?.thumbnails?.default?.url"
+        />
+        <div class="custom__video-title">
+          <h3 class="title">
+            {{ videoDetails?.snippet.title }}
+          </h3>
+          <p>
+            {{ videoDetails?.snippet?.publishedAt | date: "fullDate" }}
+          </p>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-divider></mat-divider>
+    <div class="description">
+      <h3 class="title">Channel: {{ videoDetails?.snippet?.channelTitle }}</h3>
+    </div>
+
+    <div class="custom__btn-row">
+      <button mat-raised-button color="accent" (click)="openVideoDialog()">
+        Open Video
+      </button>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
